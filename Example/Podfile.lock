@@ -1,0 +1,16 @@
+PODS:
+  - Gatti (0.1.0)
+
+DEPENDENCIES:
+  - Gatti (from `../`)
+
+EXTERNAL SOURCES:
+  Gatti:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Gatti: 281083261f02e8b575d581adb9342be6bed3a985
+
+PODFILE CHECKSUM: 0a588616c631f76fdf05938aa6122f5402861cb7
+
+COCOAPODS: 1.5.0

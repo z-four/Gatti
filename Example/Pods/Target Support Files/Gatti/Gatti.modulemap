@@ -1,0 +1,6 @@
+framework module Gatti {
+  umbrella header "Gatti-umbrella.h"
+
+  export *
+  module * { export * }
+}

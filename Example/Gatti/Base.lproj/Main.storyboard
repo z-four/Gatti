@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +20,51 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ctB-Cw-OMN">
+                                <rect key="frame" x="62.5" y="120" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="lyn-Gx-wwI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b3G-7D-Vau">
+                                <rect key="frame" x="62.5" y="175" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="UeH-GB-QUM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxu-LK-HxD">
+                                <rect key="frame" x="62.5" y="289" width="250" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="5VH-Cw-g7L"/>
+                                    <constraint firstAttribute="height" constant="80" id="aac-iv-cer"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b3G-7D-Vau" firstAttribute="trailing" secondItem="ctB-Cw-OMN" secondAttribute="trailing" id="1GW-kU-ohL"/>
+                            <constraint firstItem="bxu-LK-HxD" firstAttribute="top" secondItem="b3G-7D-Vau" secondAttribute="bottom" constant="84" id="26F-So-vkP"/>
+                            <constraint firstItem="ctB-Cw-OMN" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="2zo-tW-r4a"/>
+                            <constraint firstItem="b3G-7D-Vau" firstAttribute="top" secondItem="ctB-Cw-OMN" secondAttribute="bottom" constant="25" id="7l3-bK-xgQ"/>
+                            <constraint firstItem="bxu-LK-HxD" firstAttribute="leading" secondItem="b3G-7D-Vau" secondAttribute="leading" id="Mx8-TS-8RV"/>
+                            <constraint firstItem="ctB-Cw-OMN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="X4l-M1-JrM"/>
+                            <constraint firstItem="bxu-LK-HxD" firstAttribute="trailing" secondItem="b3G-7D-Vau" secondAttribute="trailing" id="m5N-3E-ggq"/>
+                            <constraint firstItem="b3G-7D-Vau" firstAttribute="leading" secondItem="ctB-Cw-OMN" secondAttribute="leading" id="yBh-pt-1il"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstTextField" destination="ctB-Cw-OMN" id="4Tr-2G-U0I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

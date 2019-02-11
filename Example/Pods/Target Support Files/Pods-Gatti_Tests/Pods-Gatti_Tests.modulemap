@@ -1,0 +1,6 @@
+framework module Pods_Gatti_Tests {
+  umbrella header "Pods-Gatti_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
