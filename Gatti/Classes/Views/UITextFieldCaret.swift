@@ -114,7 +114,7 @@ extension UITextFieldCaret: UITextFieldDelegate {
     }
     
     @available(iOS 10.0, *)
-    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         delegate?.textFieldDidEndEditing?(textField, reason: reason)
     }
     
@@ -197,7 +197,7 @@ extension UITextFieldCaret {
         
         //add rotation observer
         NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged),
-                                               name: .UIDeviceOrientationDidChange,
+                                               name: UIDevice.orientationDidChangeNotification,
                                                object: nil)
         
         //setup cursor and add as root child view

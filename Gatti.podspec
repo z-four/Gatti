@@ -7,8 +7,9 @@
 #
 
 Pod::Spec.new do |s|
+  s.swift_version    = '4.2'
   s.name             = 'Gatti'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Flying caret library for UITextField.'
 
 # This description is used to generate tags and improve search results.
