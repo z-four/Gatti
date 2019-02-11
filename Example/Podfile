@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Gatti_Example' do
+  pod 'Gatti', :path => '../'
+
+  target 'Gatti_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
