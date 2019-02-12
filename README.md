@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="/Resources/logo.gif">
+  <img src="/Resources/logo.gif" width="700px">
 </p>
 
 [![Version](https://img.shields.io/cocoapods/v/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
@@ -11,19 +11,68 @@
 
 **Gatti** is an animation library for moving between text fields in an elegant style. It is especially well suited for better user interactions such as on the auth screens.
 
-* [Example](#-example)
-* [How to use](#-how-to-use)
-* [Installation](#-installation)
-  * [Cocoapods](#using-cocoapods)
-* [Requirements](#-requirements)
-* [License](#-license)
-
-## Example
 Here is a quick example of how you can transform your screens!
 
 <p align="center">
-  <img src="/Resources/sample.gif" height="600px">
+  <img src="/Resources/sample.gif" height="700px">
 </p>
+
+## Appearence
+
+The library have a default appearance. So, when you don't specify the speed or color properties, `Gatti` uses the default values.
+
+Default values:
+- **speed**: TimeInterval
+    - *default: 0.55*
+- **color**: UIColor?
+  - *default: .none (textField.tintColor by default)*
+
+## How to use
+
+```swift
+
+ override func viewDidLoad() {
+     super.viewDidLoad()
+    
+     //Attach cursor to the UIViewController
+     Gatti.attach(to: self)
+     
+     //Attach cursor and setup the delegate
+     Gatti.attach(to: self, delegate: self)
+     
+     //Attach cursor for the specific text fields
+     Gatti.attach(to: self, textFields: [UITextField])
+     
+     //Update cursor moving speed and set a color for all the text fields
+     Gatti.update(to: self, speed: 0.8, color: .red)
+     
+     ...
+     
+     //Detach cursor from the sreen
+     Gatti.detach(from: self)
+ }
+```
+
+#### Delegate
+
+```swift
+
+extension ViewController: UITextFieldDelegate, UITextFieldCaretDelegate {
+    
+    func caretWillAttach(to textField: UITextField) {
+        //will attach to the UITextField
+    }
+    
+    func caretDidDetach(from textField: UITextField) {
+        //did detach from the UITextField
+    }
+   
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //default UITextField delegate
+        return true
+    }
+}
+```
 
 ## Requirements
 
@@ -40,11 +89,6 @@ Edit your `Podfile` and specify the dependency:
 ```ruby
 pod "Gatti"
 ```
-
-## Author
-
-* Dmitriy Zhyzhko
-* zfour.dev@gmail.com
 
 ## License
 
