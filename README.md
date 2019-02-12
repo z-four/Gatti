@@ -5,7 +5,7 @@
 
 ## What is it?
 
-**Gatti** is an animation library for moving between text fields in an elegant style. It is especially well suited for better user interactions such as on the auth screens.
+**Gatti** is a library for moving cursor between text fields in an elegant style. It is especially well suited for better user interactions such as on the auth screens.
 
 Here is a quick example of how you can transform your screens!
 
