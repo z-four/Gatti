@@ -1,8 +1,4 @@
 
-<p align="center">
-  <img src="/Resources/logo.gif" width="700px">
-</p>
-
 [![Version](https://img.shields.io/cocoapods/v/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
 [![License](https://img.shields.io/cocoapods/l/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
 [![Platform](https://img.shields.io/cocoapods/p/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
@@ -81,6 +77,10 @@ extension ViewController: UITextFieldDelegate, UITextFieldCaretDelegate {
 * Swift 4.2
 
 ## Installation
+
+<p align="center">
+  <img src="/Resources/logo.gif">
+</p>
 
 #### Using [CocoaPods](https://cocoapods.org)
 
