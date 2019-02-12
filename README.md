@@ -1,6 +1,7 @@
-# Gatti
+<p align="center">
+  <img src="/Resources/logo.gif" height="300px">
+</p>
 
-[![CI Status](https://img.shields.io/travis/z-four/Gatti.svg?style=flat)](https://travis-ci.org/z-four/Gatti)
 [![Version](https://img.shields.io/cocoapods/v/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
 [![License](https://img.shields.io/cocoapods/l/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
 [![Platform](https://img.shields.io/cocoapods/p/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
