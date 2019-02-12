@@ -76,13 +76,11 @@ extension ViewController: UITextFieldDelegate, UITextFieldCaretDelegate {
 * CocoaPods 1.0.0+
 * Swift 4.2
 
-## Installation
-
 <p align="center">
   <img src="/Resources/logo.gif">
 </p>
 
-#### Using [CocoaPods](https://cocoapods.org)
+#### Installation using [CocoaPods](https://cocoapods.org)
 
 Edit your `Podfile` and specify the dependency:
 
