@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="/Resources/logo.gif" height="300px">
-</p>
+
 
 [![Version](https://img.shields.io/cocoapods/v/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
 [![License](https://img.shields.io/cocoapods/l/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
