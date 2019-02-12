@@ -80,7 +80,7 @@ extension ViewController: UITextFieldDelegate, UITextFieldCaretDelegate {
   <img src="/Resources/logo.gif">
 </p>
 
-Gatti is available through CocoaPods.
+Library is available through CocoaPods.
 Edit your `Podfile` and specify the dependency:
 
 ```ruby
