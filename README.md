@@ -18,7 +18,7 @@ Here is a quick example of how you can transform your screens!
 
 ## Appearence
 
-The library have a default appearance. So, when you don't specify the speed or color properties, `Gatti` uses the default values.
+The library has a default appearance. So, when you don't specify the speed or color properties, `Gatti` uses the default values.
 
 Default values:
 - **speed**: TimeInterval
