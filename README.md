@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="/Resources/logo.gif" height="150px">
+</p>
 
 [![Version](https://img.shields.io/cocoapods/v/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
 [![License](https://img.shields.io/cocoapods/l/Gatti.svg?style=flat)](https://cocoapods.org/pods/Gatti)
@@ -44,7 +47,7 @@ Default values:
      
      ...
      
-     //Detach cursor from the sreen
+     //Detach cursor from the screen
      Gatti.detach(from: self)
  }
 ```
@@ -76,9 +79,7 @@ extension ViewController: UITextFieldDelegate, UITextFieldCaretDelegate {
 * CocoaPods 1.0.0+
 * Swift 4.2
 
-<p align="center">
-  <img src="/Resources/logo.gif">
-</p>
+## Installation
 
 Library is available through CocoaPods.
 Edit your `Podfile` and specify the dependency:
