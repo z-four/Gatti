@@ -123,7 +123,6 @@ extension UITextFieldCaret: UITextFieldDelegate {
         return true
     }
     
-    @available(iOS 10.0, *)
     public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         delegate?.textFieldDidEndEditing?(textField, reason: reason)
     }
