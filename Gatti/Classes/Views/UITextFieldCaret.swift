@@ -8,6 +8,16 @@
 import Foundation
 import UIKit.UIView
 
+public protocol UITextFieldCaretDelegate {
+    func caretWillAttach(to textField: UITextField)
+    func caretDidDetach(from textField: UITextField)
+}
+
+protocol UITextFieldCaretProtocol {
+    var color: UIColor? { get }
+    var speed: TimeInterval { get }
+}
+
 // MARK: - Lifecycle
 internal final class UITextFieldCaret: UIView, UITextFieldCaretProtocol {
     
@@ -217,14 +227,8 @@ extension UITextFieldCaret {
     private func properCaretRect(for textField: UITextField,
                                  position: UITextPosition) -> CGRect {
         //get global caret rect
-        var caretGlobalRect: CGRect?
-        if let caret = textField.subviews.first?.subviews.first?.subviews.first?.subviews.first {
-            caretGlobalRect = caret.convert(caret.bounds, to: superview)
-            
-        } else if textField.subviews.count > 1,
-            let caret = textField.subviews[1].subviews.first?.subviews.first?.subviews.first {
-            caretGlobalRect = caret.convert(caret.bounds, to: superview)
-        }
+        let caretView = textField.getCaretView()
+        let caretGlobalRect = caretView?.convert(caretView?.bounds ?? .zero, to: superview)
         
         //get caret rect within text field
         let caretRect = textField.caretRect(for: position)

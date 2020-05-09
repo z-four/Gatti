@@ -15,9 +15,10 @@
 		A25138EF78055D13D9263AD308B8D0A0 /* Pods-Gatti_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 814BCAC4F4BA01EC940A1F8194CE883C /* Pods-Gatti_Tests-dummy.m */; };
 		AD29CC62943A0502B15366286E2A0C99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		AF8D96396FF0F920107F31AE1C9A1B65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C9E2036BCA7A17AEAE5B8B89488EAAB2 /* UITextFieldCaret+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BF46BE23C9D3C7035FCCD33EB1C09 /* UITextFieldCaret+Utils.swift */; };
+		C9E2036BCA7A17AEAE5B8B89488EAAB2 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BF46BE23C9D3C7035FCCD33EB1C09 /* UITextField+Extensions.swift */; };
 		D22DCE22069EBB7EAA21CE626EA5B008 /* Gatti.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54B2B094BF93593176B8F5287822A8 /* Gatti.swift */; };
 		DA4B239922120AAD00884920 /* UITextFieldCaret.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B239822120AAD00884920 /* UITextFieldCaret.swift */; };
+		DA6B5E262466E51E00EDE111 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B5E252466E51E00EDE111 /* UIView+Extensions.swift */; };
 		FC59FE3FC0D6CBC4B9AD5D2584F9CE12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,11 +71,12 @@
 		CF5B69E700DA0C6708DB3C660873FB49 /* Pods-Gatti_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Gatti_Example.modulemap"; sourceTree = "<group>"; };
 		D691C97F4097916ABD1CA2D26053652A /* Pods-Gatti_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gatti_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DA4B239822120AAD00884920 /* UITextFieldCaret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldCaret.swift; sourceTree = "<group>"; };
+		DA6B5E252466E51E00EDE111 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		DBCDA6251B52043F2024CD684440219B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EF8EFCA65271C36D502786AFE31BB417 /* Gatti.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Gatti.modulemap; sourceTree = "<group>"; };
 		F3B8E0391415B1DE10890D7E6C8E460F /* Gatti-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gatti-dummy.m"; sourceTree = "<group>"; };
 		FA0A5CCB228D6EC6BB73CDC9A73A060B /* Pods-Gatti_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gatti_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		FB5BF46BE23C9D3C7035FCCD33EB1C09 /* UITextFieldCaret+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextFieldCaret+Utils.swift"; sourceTree = "<group>"; };
+		FB5BF46BE23C9D3C7035FCCD33EB1C09 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		FE86243652E80A37CDA27D1868AC051E /* Pods-Gatti_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Gatti_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +120,8 @@
 		34ABA4D9A93E1E363A9EB0A1C9630138 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FB5BF46BE23C9D3C7035FCCD33EB1C09 /* UITextFieldCaret+Utils.swift */,
+				FB5BF46BE23C9D3C7035FCCD33EB1C09 /* UITextField+Extensions.swift */,
+				DA6B5E252466E51E00EDE111 /* UIView+Extensions.swift */,
 			);
 			name = Extensions;
 			path = Gatti/Classes/Extensions;
@@ -353,6 +356,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -388,7 +392,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E2036BCA7A17AEAE5B8B89488EAAB2 /* UITextFieldCaret+Utils.swift in Sources */,
+				DA6B5E262466E51E00EDE111 /* UIView+Extensions.swift in Sources */,
+				C9E2036BCA7A17AEAE5B8B89488EAAB2 /* UITextField+Extensions.swift in Sources */,
 				992EB26CB5936161DCA1FBBDEF03CAF2 /* Gatti-dummy.m in Sources */,
 				D22DCE22069EBB7EAA21CE626EA5B008 /* Gatti.swift in Sources */,
 				DA4B239922120AAD00884920 /* UITextFieldCaret.swift in Sources */,
