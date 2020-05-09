@@ -15,11 +15,12 @@ public final class Gatti {
     ///   - vc: UIViewController
     ///   - speed: animation duration
     ///   - color: caret color
-    public static func update(for vc: UIViewController, speed: TimeInterval, color: UIColor? = nil) {
+    public static func update(for vc: UIViewController, speed: TimeInterval? = nil, color: UIColor? = .none) {
         if let caret = vc.view.allSubViewsOf(type: UITextFieldCaret.self).first {
-            print("FIND caret")
             caret.color = color
-            caret.speed = speed
+            if let speed = speed {
+                caret.speed = speed
+            }
         }
     }
     
