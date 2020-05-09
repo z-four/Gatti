@@ -19,6 +19,7 @@
 		D22DCE22069EBB7EAA21CE626EA5B008 /* Gatti.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA54B2B094BF93593176B8F5287822A8 /* Gatti.swift */; };
 		DA4B239922120AAD00884920 /* UITextFieldCaret.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4B239822120AAD00884920 /* UITextFieldCaret.swift */; };
 		DA6B5E262466E51E00EDE111 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B5E252466E51E00EDE111 /* UIView+Extensions.swift */; };
+		DA6B5E282466F0EE00EDE111 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6B5E272466F0EE00EDE111 /* Constants.swift */; };
 		FC59FE3FC0D6CBC4B9AD5D2584F9CE12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		D691C97F4097916ABD1CA2D26053652A /* Pods-Gatti_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Gatti_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DA4B239822120AAD00884920 /* UITextFieldCaret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldCaret.swift; sourceTree = "<group>"; };
 		DA6B5E252466E51E00EDE111 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		DA6B5E272466F0EE00EDE111 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Gatti/Classes/Constants.swift; sourceTree = "<group>"; };
 		DBCDA6251B52043F2024CD684440219B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EF8EFCA65271C36D502786AFE31BB417 /* Gatti.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Gatti.modulemap; sourceTree = "<group>"; };
 		F3B8E0391415B1DE10890D7E6C8E460F /* Gatti-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Gatti-dummy.m"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				CA54B2B094BF93593176B8F5287822A8 /* Gatti.swift */,
+				DA6B5E272466F0EE00EDE111 /* Constants.swift */,
 				DA4B239722120A9600884920 /* Views */,
 				34ABA4D9A93E1E363A9EB0A1C9630138 /* Extensions */,
 				A95A00E0DABF7B714F8A86FC29F23B93 /* Pod */,
@@ -397,6 +400,7 @@
 				992EB26CB5936161DCA1FBBDEF03CAF2 /* Gatti-dummy.m in Sources */,
 				D22DCE22069EBB7EAA21CE626EA5B008 /* Gatti.swift in Sources */,
 				DA4B239922120AAD00884920 /* UITextFieldCaret.swift in Sources */,
+				DA6B5E282466F0EE00EDE111 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

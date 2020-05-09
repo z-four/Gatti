@@ -11,10 +11,27 @@ import Gatti
 
 // MARK: - Lifecycle
 final class ViewController: UIViewController {
+    @IBOutlet weak var button: UIButton!
+    
+    @IBAction func some(_ sender: Any) {
+        let vc = UIViewController()
+        navigationController?.setViewControllers([vc], animated: true)
+    }
+    
+    @IBOutlet weak var textFF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Gatti.attach(to: self, delegate: self)
+        var imageView = UIImageView();
+        var image = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        image.backgroundColor = UIColor.blue
+        var image1 = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+              image1.backgroundColor = UIColor.blue
+        textFF.leftView = image;
+        textFF.leftViewMode = .always
+          textFF.rightViewMode = .always
+        textFF.rightView = image1
     }
     
     deinit {
