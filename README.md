@@ -33,21 +33,21 @@ Default values:
  override func viewDidLoad() {
      super.viewDidLoad()
     
-     //Attach cursor to the UIViewController
+     // Attach cursor to the UIViewController
      Gatti.attach(to: self)
      
-     //Attach cursor and setup the delegate
+     // Attach cursor with delegate
      Gatti.attach(to: self, delegate: self)
      
-     //Attach cursor for the specific text fields
+     // Attach cursor only for some fields
      Gatti.attach(to: self, textFields: [UITextField])
      
-     //Update cursor moving speed and set a color for all the text fields
+     // Update cursor moving speed and set defaule color for all the text fields
      Gatti.update(to: self, speed: 0.8, color: .red)
      
      ...
      
-     //Detach cursor from the screen
+     // Detach cursor from the screen
      Gatti.detach(from: self)
  }
 ```
@@ -59,15 +59,15 @@ Default values:
 extension ViewController: UITextFieldDelegate, UITextFieldCaretDelegate {
     
     func caretWillAttach(to textField: UITextField) {
-        //will attach to the UITextField
+        // Will attach to the UITextField
     }
     
     func caretDidDetach(from textField: UITextField) {
-        //did detach from the UITextField
+        // Did detach from the UITextField
     }
    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //default UITextField delegate
+        // Handle UITextField delegate methods
         return true
     }
 }
@@ -75,9 +75,9 @@ extension ViewController: UITextFieldDelegate, UITextFieldCaretDelegate {
 
 ## Requirements
 
-* iOS 8.0+
+* iOS 10.0+
 * CocoaPods 1.0.0+
-* Swift 4.2
+* Swift 5
 
 ## Installation
 
