@@ -16,7 +16,8 @@ public final class Gatti {
     ///   - speed: animation duration
     ///   - color: caret color
     public static func update(for vc: UIViewController, speed: TimeInterval, color: UIColor? = nil) {
-        if let caret = allCarets(of: vc.view, onlyFirst: true).first {
+        if let caret = vc.view.allSubViewsOf(type: UITextFieldCaret.self).first {
+            print("FIND caret")
             caret.color = color
             caret.speed = speed
         }
@@ -29,7 +30,7 @@ public final class Gatti {
     /// - delegate: UITextFieldDelegate & UITextFieldCaretDelegate
     public static func attach(to vc: UIViewController,
                               delegate: (UITextFieldDelegate & UITextFieldCaretDelegate)? = nil) {
-        attach(to: vc, textFields: allTextFields(of: vc.view), delegate: delegate)
+        attach(to: vc, textFields: vc.view.allSubViewsOf(type: UITextField.self), delegate: delegate)
     }
     
     /// Attach flying caret to the UIViewController
@@ -40,7 +41,7 @@ public final class Gatti {
     /// - delegate: UITextFieldDelegate & UITextFieldCaretDelegate
     public static func attach(to vc: UIViewController, textFields: [UITextField],
                               delegate: (UITextFieldDelegate & UITextFieldCaretDelegate)? = nil) {
-        guard allCarets(of: vc.view, onlyFirst: true).count == 0 else { return }
+        guard vc.view.allSubViewsOf(type: UITextFieldCaret.self).count == 0 else { return }
         
         let caret = UITextFieldCaret()
         caret.delegate = delegate
@@ -52,44 +53,8 @@ public final class Gatti {
     ///
     /// - Parameter vc: UIViewController
     public static func detach(from vc: UIViewController) {
-        for caret in allCarets(of: vc.view) {
+        for caret in vc.view.allSubViewsOf(type: UITextFieldCaret.self) {
             caret.deinit()
         }
-    }
-    
-    /// Find all text fields of a root view
-    ///
-    /// - Parameter view: Root view
-    /// - Returns: array with text fields
-    private static func allTextFields(of view: UIView) -> [UITextField] {
-        var textFields = [UITextField]()
-        for subview in view.subviews {
-            textFields += allTextFields(of: subview)
-            
-            if subview is UITextField {
-                textFields.append(subview as! UITextField)
-            }
-        }
-        return textFields
-    }
-    
-    /// Find all caret on the screen
-    ///
-    /// - Parameter view: Root view
-    /// - Returns: array with carets
-    private static func allCarets(of view: UIView, onlyFirst: Bool = false) -> [UITextFieldCaret] {
-        var carets = [UITextFieldCaret]()
-        for subview in view.subviews {
-            carets += allCarets(of: subview)
-            
-            if subview is UITextFieldCaret {
-                let caret = subview as! UITextFieldCaret
-                if onlyFirst {
-                    return [caret]
-                }
-                carets.append(caret)
-            }
-        }
-        return carets
     }
 }
