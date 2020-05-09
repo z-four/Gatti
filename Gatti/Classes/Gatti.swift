@@ -1,6 +1,6 @@
 //
 //  Gatti
-//  Created by z4.
+//  Created by Dmitriy Zhyzhko.
 //
 
 import Foundation
@@ -9,12 +9,12 @@ public final class Gatti {
     
     private init() {}
     
-    /// Update flying caret params
+    /// Updates flying caret config.
     ///
     /// - Parameters:
-    ///   - vc: UIViewController
-    ///   - speed: animation duration
-    ///   - color: caret color
+    ///   - vc: Current UIViewController.
+    ///   - speed: Animation speed.
+    ///   - color: Caret color.
     public static func update(for vc: UIViewController, speed: TimeInterval? = nil, color: UIColor? = .none) {
         if let caret = vc.view.allSubViewsOf(type: UITextFieldCaret.self).first {
             caret.color = color
@@ -24,22 +24,22 @@ public final class Gatti {
         }
     }
     
-    /// Attach flying caret to the UIViewController
+    /// Attachs flying caret to the UIViewController.
     ///
     /// - Parameters:
-    /// - vc: UIViewController
-    /// - delegate: UITextFieldDelegate & UITextFieldCaretDelegate
+    ///   - vc: Current UIViewController.
+    ///   - delegate: UITextFieldDelegate & UITextFieldCaretDelegate.
     public static func attach(to vc: UIViewController,
                               delegate: (UITextFieldDelegate & UITextFieldCaretDelegate)? = nil) {
         attach(to: vc, textFields: vc.view.allSubViewsOf(type: UITextField.self), delegate: delegate)
     }
     
-    /// Attach flying caret to the UIViewController
+    /// Attachs flying caret to the UIViewController.
     ///
     /// - Parameters:
-    ///   - vc: UIViewController
-    ///   - textFields: set an available text field for flying caret effect
-    /// - delegate: UITextFieldDelegate & UITextFieldCaretDelegate
+    ///   - vc: Current UIViewController.
+    ///   - textFields: Array of UITextFields that should have flying caret effect.
+    ///   - delegate: UITextFieldDelegate & UITextFieldCaretDelegate.
     public static func attach(to vc: UIViewController, textFields: [UITextField],
                               delegate: (UITextFieldDelegate & UITextFieldCaretDelegate)? = nil) {
         guard vc.view.allSubViewsOf(type: UITextFieldCaret.self).count == 0 else { return }
@@ -50,12 +50,12 @@ public final class Gatti {
         vc.view.addSubview(caret)
     }
     
-    /// Detach flying caret from the UIViewController
+    /// Detachs flying caret from the UIViewController.
     ///
-    /// - Parameter vc: UIViewController
+    /// - Parameter vc: Current UIViewController.
     public static func detach(from vc: UIViewController) {
-        for caret in vc.view.allSubViewsOf(type: UITextFieldCaret.self) {
-            caret.deinit()
+        vc.view.allSubViewsOf(type: UITextFieldCaret.self).forEach {
+            $0.deinit()
         }
     }
 }
