@@ -22,10 +22,10 @@ protocol UITextFieldCaretProtocol {
 internal final class UITextFieldCaret: UIView, UITextFieldCaretProtocol {
     
     ///Config
-    private var width: CGFloat = 1
-    private var height: CGFloat = 22
-    private var delay: TimeInterval = 0.1
-    internal var speed: TimeInterval = 0.55
+    private var width: CGFloat = Constants.Size.caretWidth
+    private var height: CGFloat = Constants.Size.caretHeight
+    private var delay: TimeInterval = Constants.Anim.delay
+    internal var speed: TimeInterval = Constants.Anim.speed
     internal var color: UIColor? = .none
     
     ///Caret
